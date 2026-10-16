@@ -1,0 +1,19 @@
+# Derived from the imports actually present across the pipeline.
+# Versions are lower bounds, not pins: the analysis was run on Python 3.11
+# with OSMnx 2.1.1, which is the version recorded in the cached walk graph's
+# GraphML header.
+#
+# GeoPandas 1.x and Shapely 2.x are required, not optional. The snapping step
+# in walk_snap.py uses GeoSeries.sindex.nearest(..., return_distance=True),
+# which needs the Shapely 2 STRtree backend; on Shapely 1.8 it will either be
+# missing or silently return a different structure.
+
+pandas>=2.0
+numpy>=1.24
+geopandas>=1.0
+shapely>=2.0
+pyproj>=3.5
+networkx>=3.0
+osmnx>=2.0
+scipy>=1.10
+matplotlib>=3.7

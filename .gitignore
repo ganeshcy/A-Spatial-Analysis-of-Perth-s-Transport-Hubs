@@ -1,0 +1,45 @@
+# ---------------------------------------------------------------------------
+# Source data — NOT redistributed. See README for where to obtain each.
+# Together these are ~2.2 GB and several individual files exceed GitHub's
+# 100 MB hard limit.
+# ---------------------------------------------------------------------------
+google_transit/
+*/google_transit/
+Spatial_Data/
+*/Spatial_Data/
+data/
+*/data/
+
+# ---------------------------------------------------------------------------
+# Generated outputs. Everything here is reproducible by running the pipeline.
+# The one exception is output/node_master.csv, force-added so that every table
+# in the thesis can be checked without a 4.5 GB re-run — see README.
+# ---------------------------------------------------------------------------
+output/
+*/output/
+output_prefix_snap/
+*/output_prefix_snap/
+
+# Cached intermediates
+*.graphml
+*.gpkg
+_walk_pairs_*.csv
+*.pkl
+
+# ---------------------------------------------------------------------------
+# The per-stand baseline scripts at the repository root are not published.
+# The leading slash anchors this to the root, so merged_node_variant/*.py is
+# unaffected.
+# ---------------------------------------------------------------------------
+/*.py
+/roscript1
+
+# ---------------------------------------------------------------------------
+# Housekeeping
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.DS_Store
+.ipynb_checkpoints/
+.venv/
+venv/
